@@ -1,6 +1,7 @@
 # Smart-Calculator
-Drivers : LCD, Keypad, DIO  following the autosar Layered Archticture 
-the calculator support many operations: such as 
+Drivers : LCD, Keypad, DIO  following the autosar Layered Archticture
+
+The calculator support many operations: such as 
 
 Single Operation
 ![c1png](https://user-images.githubusercontent.com/120275931/222927880-80d4450a-e667-47f8-adb6-d1ff785b387b.png)
