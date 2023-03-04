@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ProjectGuid>{ae921900-573a-46da-8013-04274b0afaef}</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Smart Calculator</AssemblyName>
+    <Name>Smart Calculator</Name>
+    <RootNamespace>Smart Calculator</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>3.5.0</AsfVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App\Smart Calculator.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\KEYPAD_cfg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\KEYPAD_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\KEYPAD_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KeyPad\KEYPAD_prg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_prg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\PORT\PORT_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\PORT\PORT_prg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LIB\BIT_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LIB\STD_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_prg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_prv.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App" />
+    <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\KeyPad" />
+    <Folder Include="HAL\PORT" />
+    <Folder Include="MCAL" />
+    <Folder Include="HAL" />
+    <Folder Include="LIB" />
+    <Folder Include="MCAL\DIO" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
