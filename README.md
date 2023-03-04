@@ -1,5 +1,7 @@
 # Smart-Calculator
-Drivers : LCD, Keypad, DIO  following the autosar Layered Archticture
+MicroController: AVR atmega 32
+
+Drivers: DIO, LCD, KEYPAD
 
 The calculator support many operations: such as 
 
